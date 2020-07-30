@@ -1,0 +1,20 @@
+<table class="table table-stripped">
+    <thead ng-if="$ctrl.foundItems>1">
+      <th>Name</th>
+      <th>Short_Name</th>
+      <th>Description</th>
+      <th>Delete</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="fil in $ctrl.foundItems">
+        <td>{{fil.name}}</td>
+        <td>{{fil.short_name}}</td>
+        <td>{{fil.description}}</td>
+        <td>
+          <button ng-click="$ctrl.removeItem($index)" class="btn btn-primary">Don't want this one!</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+  <!-- {{$ctrl.mensaje}} -->
